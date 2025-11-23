@@ -1,0 +1,11 @@
+{
+  "entertainment": 0,
+  "fitness": 1,
+  "food": 2,
+  "health": 3,
+  "medical dental": 4,
+  "shopping": 5,
+  "subscriptions": 6,
+  "travel": 7,
+  "utilities": 8
+}

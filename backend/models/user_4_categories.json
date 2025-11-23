@@ -1,0 +1,17 @@
+{
+  "merchant_map": {
+    "groceries": "Groceries",
+    "dining": "Food"
+  },
+  "keyword_map": {
+    "spent": "Groceries",
+    "groceries": "Groceries",
+    "\"spent": "Food",
+    "dining\"": "Food"
+  },
+  "amount_patterns": {
+    "5": "Groceries",
+    "80": "Rent",
+    "4": "Food"
+  }
+}
