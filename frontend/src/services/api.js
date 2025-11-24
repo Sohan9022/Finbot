@@ -212,27 +212,25 @@ export const authAPI = {
 // CHAT API
 // =====================================================
 export const chatAPI = {
-  sendMessage: (message, chat_id = null) =>
-    api.post('/api/chat/message', { message, chat_id }),
+  sendMessage: (message, chat_id = null) => {
+    const payload = { message };
 
-  getCategories: () =>
-    api.get('/api/chat/categories'),
+    // Only add chat_id if it is a valid integer
+    if (typeof chat_id === "number") {
+      payload.chat_id = chat_id;
+    }
 
-  listSessions: () =>
-    api.get('/api/chat/list'),
+    return api.post('/api/chat/message', payload);
+  },
 
-  getSession: (chat_id) =>
-    api.get(`/api/chat/${chat_id}`),
-
-  createSession: (title = 'Chat') =>
-    api.post('/api/chat', { title }),
-
-  sendFeedback: (chat_id, payload) =>
-    api.post(`/api/chat/${chat_id}/feedback`, payload),
-
-  getSummary: (chat_id) =>
-    api.get(`/api/chat/${chat_id}/summary`),
+  getCategories: () => api.get('/api/chat/categories'),
+  listSessions: () => api.get('/api/chat/list'),
+  getSession: (chat_id) => api.get(`/api/chat/${chat_id}`),
+  createSession: (title = 'Chat') => api.post('/api/chat', { title }),
+  sendFeedback: (chat_id, payload) => api.post(`/api/chat/${chat_id}/feedback`, payload),
+  getSummary: (chat_id) => api.get(`/api/chat/${chat_id}/summary`)
 };
+
 
 // =====================================================
 // ANALYTICS API

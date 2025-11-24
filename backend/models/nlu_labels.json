@@ -1,0 +1,14 @@
+[
+  "analysis_query",
+  "category_list_query",
+  "expense_recording",
+  "help",
+  "income_recording",
+  "product_frequency_query",
+  "product_price_query",
+  "recent_transactions_query",
+  "saving_recording",
+  "spending_query",
+  "top_expenses_query",
+  "unknown"
+]
